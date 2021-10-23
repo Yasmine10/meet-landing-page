@@ -9,8 +9,8 @@ const cssnano = require('cssnano');
 function sassTask() {
     return gulp.src("./app/scss/**/*.scss", { sourcemaps: true })
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest("./dist/css", { sourcemaps: '.' }))
         .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(gulp.dest("./dist/css", { sourcemaps: '.' }))
         .pipe(browserSync.stream());
 }
 

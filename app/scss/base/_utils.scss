@@ -1,0 +1,23 @@
+/*******************************/
+/********** UTILS **********/
+/*******************************/
+
+@use "sass:map";
+
+$breakpoints: (
+  "small": 24rem,   // 375px
+  "medium": 48rem,  // 768px
+  "large": 75rem    // 1200px
+);
+
+// for media queries
+@mixin mq($size) {
+  @media (min-width: map.get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+.container {
+  width: min(90%, 70rem);
+  margin: 0 auto;
+}

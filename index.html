@@ -4,16 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="icon" type="image/png" sizes="32x32" href="./app/assets/favicon-32x32.png">
+    <link rel="stylesheet" href="/dist/css/main.css">
 
-    <link rel="stylesheet" href="/dist/main.css">
-
-    <title>Document</title>
+    <title>Frontend Mentor | Meet landing page</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello</h1>
-    </div>
+    <header class="header">
+        <img src="app/assets/logo.svg" alt="meet">
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <img class="hero__img-left" src="app/assets/tablet/image-hero.png" alt="" srcset="app/assets/tablet/image-hero.png 0w, app/assets/desktop/image-hero-left.png 1200w" />
+            <img class="hero__img-right" src="/app/assets/desktop/image-hero-right.png" alt="" />
+            <div class="hero__content container">
+                <h1 class="hero__title">Group Chat for Everyone</h1>
+                <p class="hero__text">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+                <div class="btn-group">
+                    <button class="btn-primary">Download <span>v1.3</span></button>
+                    <a class="btn-secondary">What is it?</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="info container">
+            <div class="circle-stripe">
+                <div class="stripe"></div>
+                <div class="circle">01</div>
+            </div>
+            <div class="info__img-group">
+                <img src="/app/assets/desktop/image-woman-in-videocall.jpg" alt="Woman having a videocall on her laptop">
+                <img src="/app/assets/desktop/image-women-videochatting.jpg" alt="Three women videochatting on a phone">
+                <img src="/app/assets/desktop/image-men-in-meeting.jpg" alt="Two men having a meeting via pc">
+                <img src="/app/assets/desktop/image-man-texting.jpg" alt="Man texting on his phone">
+            </div>
+            <div class="info__content">
+                <p class="overline">Built for modern use</p>
+                <h2 class="info__title">Smarter meetings, all in one place</h2>
+                <p class="info__text">Send messages, share files, show your screen, and record your meetings — all in one 
+                    workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="circle-stripe">
+            <div class="stripe"></div>
+            <div class="circle">02</div>
+        </div>
+        <div class="footer__container container">
+            <h2 class="footer__title">Experience more together</h2>
+            <p class="footer__text">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+            <button class="btn-secondary">Download <span>v1.3</span></button>
+        </div>
+    </footer>
 </body>
 </html>
