@@ -47,7 +47,7 @@ h2 {
 
 h1 {
   font-size: map.get($fontsizes-mobile, "header");
-  line-height: 4;
+  line-height: 1;
 
   @include mq(medium) {
     font-size: map.get($fontsizes-tablet, "header");
@@ -104,17 +104,29 @@ p,
 
 .btn {
   display: inline-block;
-  color: var(--clr-neutral-light);
+  border: none;
   border-radius: 1.875rem;
+  padding: 0.75rem 2rem;
+  font-weight: map.get($fontweights, "black");
+  color: var(--clr-neutral-light);
+
+  & + & {
+    margin-top: 1rem;
+  }
 }
 
 .btn-primary {
   @extend .btn;
   background-color: var(--clr-primary);
 
+  span {
+    color: var(--clr-primary--light);
+    padding-left: 0.25rem;
+  }
+
   &:hover,
   &:focus {
-    background-color: var(--clr-primary--light);
+    background-color: hsla(192, 37%, 48%, 0.7);
   }
 }
 
@@ -122,8 +134,13 @@ p,
   @extend .btn;
   background-color: var(--clr-secondary);
 
+  span {
+    color: var(--clr-secondary--light);
+    padding-left: 0.25rem;
+  }
+
   &:hover,
   &:focus {
-    background-color: var(--clr-secondary--light);
+    background-color: hsla(268, 34%, 53%, 0.7);
   }
 }

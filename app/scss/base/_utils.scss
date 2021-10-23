@@ -17,8 +17,7 @@ $breakpoints: (
   }
 }
 
-
 .container {
-  width: 60%;
+  width: min(90%, 70rem);
   margin: 0 auto;
 }
