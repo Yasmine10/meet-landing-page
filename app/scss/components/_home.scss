@@ -65,7 +65,6 @@
       min-width: 90%;
       left: -10%;
       top: -10%;
-      // padding-right: 0.75rem;
     }
   }  
 
@@ -74,14 +73,9 @@
     height: 0;
 
     grid-area: image-right;
-    position: relative;
-    
-    // min-width: 110%;
-    // margin-right: -5%;
-    
+    position: relative;    
 
     @include mq(large) {
-      // display: block;
       visibility: visible;
       height: auto;
       overflow: hidden;
@@ -90,7 +84,6 @@
       min-width: 90%;
       right: -20%;
       top: 5%;
-      // padding-left: 0.75rem;
     }
   }
 
@@ -123,12 +116,7 @@
     margin: 0 auto;
   }
 
-  &__text {
-    // width: 120%;
-  }
-
   .btn-group {
-    // width: 15rem;
     margin: 0 auto;
     margin-top: .75rem;
 
@@ -301,7 +289,7 @@
     transform: translate(-50%);
     width: 56px;
     height: 56px;
-    background-color: white;
+    background-color: var(--clr-neutral-light);
     border: 1px solid hsla(240, 10%, 57%, 0.25);
     border-radius: 50%;
     
