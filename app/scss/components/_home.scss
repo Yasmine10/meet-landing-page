@@ -11,7 +11,7 @@
   }
 
   @include mq(large) {
-    padding-block: 5rem 3.5rem;
+    padding-block: 5rem;
   }
 }
 
@@ -20,7 +20,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr;
   grid-template-areas: 
-    "image-left"
+    "image"
     "hero-content";
   
     
@@ -29,33 +29,50 @@
   }
 
   @include mq(large) {
-    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
       "image-left hero-content image-right";
-    grid-gap: 1rem;
   }
 
-  &__img-left {
-    grid-area: image-left;
+  &__img {
+    grid-area: image;
     align-self: center;
     position: relative;
     min-width: 110%;
-    margin-left: -5%;
+    left: -5%;
+
+    @include mq(large) {
+      visibility: hidden;
+      height: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__img-left {
+    visibility: hidden;
+    height: 0;
+
+    grid-area: image-left;
+    position: relative;
     
 
     @include mq(large) {
+      visibility: visible;
+      height: auto;
+
       align-self: flex-start;
-      min-width: 100%;
-      left: -5%;
+      min-width: 90%;
+      left: -10%;
+      top: -10%;
       // padding-right: 0.75rem;
     }
   }  
 
   &__img-right {
-    // display: none;
     visibility: hidden;
     height: 0;
+
     grid-area: image-right;
     position: relative;
     
@@ -68,9 +85,10 @@
       visibility: visible;
       height: auto;
       
-      align-self: center;
-      min-width: 100%;
-      right: -15%;
+      align-self: flex-end;
+      min-width: 90%;
+      right: -20%;
+      top: 5%;
       // padding-left: 0.75rem;
     }
   }
@@ -89,8 +107,11 @@
     }
 
     @include mq(large) {
-      align-self: center;
+      align-self: flex-start;
+      margin-top: 0;
+      margin-bottom: 0;
       width: 34rem;
+      margin-block: 1rem;
     }
   }
 
